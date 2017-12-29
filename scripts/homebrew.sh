@@ -6,36 +6,38 @@ echo '\nInstall Homebrew\n'
 echo '\nInstall Brew Bundle\n'
 brew update --force
 brew bundle --file=- <<EOF
-tap "thoughtbot/formulae"
-tap "homebrew/services"
-tap "universal-ctags/universal-ctags"
 tap "caskroom/cask"
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "thoughtbot/formulae"
+
 # Unix
-brew "universal-ctags", args: ["HEAD"]
+brew "gedit"
 brew "git"
 brew "openssl"
-brew "rcm"
-brew "reattach-to-user-namespace"
-brew "the_silver_searcher"
-brew "tmux"
-brew "vim"
-brew "watchman"
-brew "zsh"
+brew "python"
+brew "ssh-copy-id"
+# brew "watchman"
+brew "wget"
+
 # Heroku
 brew "heroku"
-brew "parity"
+
 # GitHub
 brew "hub"
-# Image manipulation
-brew "imagemagick"
-# Testing
-brew "qt@5.5" if MacOS::Xcode.installed?
+
 # Programming language prerequisites and package managers
 brew "libyaml" # should come after openssl
 brew "coreutils"
 brew "yarn"
 cask "gpg-suite"
+
 # Databases
-brew "postgres", restart_service: :changed
-brew "redis", restart_service: :changed
+# brew "postgres", restart_service: :changed
+# brew "redis", restart_service: :changed
+brew "mongodb", restart_service: :changed
+
+# UI Applications
+cask "atom"
 EOF
