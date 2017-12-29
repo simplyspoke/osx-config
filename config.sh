@@ -11,8 +11,14 @@ select yn in "Yes" "No"; do
     esac
 done
 
-read -p "Would you like to run the general finder configs? (y/n) " FINDER
+read -p "\nWould you like to run the general finder configs? (y/n)\n" FINDER
 
 if [ "$FINDER" = "y" ]; then
-  source configs/finder.sh
+  source scripts/finder.sh
+fi
+
+read -p "\nWould you like to run the general hombrew installs? (y/n)\n" HOMEBREW
+
+if [ "$HOMEBREW" = "y" ]; then
+  source scripts/homebrew.sh
 fi
