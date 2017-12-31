@@ -10,9 +10,12 @@ tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "thoughtbot/formulae"
+
+# OSX Tools
+brew "mas"
 
 # Unix
+brew "bash-completion"
 brew "gedit"
 brew "git"
 brew "openssl"
@@ -23,6 +26,11 @@ brew "wget"
 
 # Heroku
 brew "heroku"
+brew 'heroku-toolbelt'
+
+# Docker
+brew 'docker'
+brew 'docker-machine'
 
 # GitHub
 brew "hub"
@@ -31,13 +39,11 @@ brew "hub"
 brew "libyaml" # should come after openssl
 brew "coreutils"
 brew "yarn"
-cask "gpg-suite"
+cask 'java'
 
 # Databases
 # brew "postgres", restart_service: :changed
 # brew "redis", restart_service: :changed
 brew "mongodb", restart_service: :changed
 
-# UI Applications
-cask "atom"
 EOF
