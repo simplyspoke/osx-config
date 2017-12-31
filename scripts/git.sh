@@ -11,8 +11,8 @@ git config --global core.excludesfile ~/.gitignore
 echo '\nWould you like to configure Github? (y/n)\n'
 read github
 
-if [ "$github" = "y" ]; then
-  echo "Please enter your Github username: "
+if [ '$github' = 'y' ]; then
+  echo 'Please enter your Github username: '
   read githubUsername
   git config --global github.user $githubUsername
   git config --global credential.helper osxkeychain

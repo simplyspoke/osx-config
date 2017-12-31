@@ -1,31 +1,31 @@
 #!/bin/bash
 
 echo '\nInstall Homebrew\n'
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'
 
 echo '\nInstall Brew Bundle\n'
 brew update --force
 brew bundle --file=- <<EOF
-tap "caskroom/cask"
-tap "homebrew/bundle"
-tap "homebrew/core"
-tap "homebrew/services"
+tap 'caskroom/cask'
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/services'
 
 # OSX Tools
-brew "mas"
+brew 'mas'
 
 # Unix
-brew "bash-completion"
-brew "gedit"
-brew "git"
-brew "openssl"
-brew "python"
-brew "ssh-copy-id"
-# brew "watchman"
-brew "wget"
+brew 'bash-completion'
+brew 'gedit'
+brew 'git'
+brew 'openssl'
+brew 'python'
+brew 'ssh-copy-id'
+# brew 'watchman'
+brew 'wget'
 
 # Heroku
-brew "heroku"
+brew 'heroku'
 brew 'heroku-toolbelt'
 
 # Docker
@@ -33,17 +33,17 @@ brew 'docker'
 brew 'docker-machine'
 
 # GitHub
-brew "hub"
+brew 'hub'
 
 # Programming language prerequisites and package managers
-brew "libyaml" # should come after openssl
-brew "coreutils"
-brew "yarn"
+brew 'libyaml' # should come after openssl
+brew 'coreutils'
+brew 'yarn'
 cask 'java'
 
 # Databases
-# brew "postgres", restart_service: :changed
-# brew "redis", restart_service: :changed
-brew "mongodb", restart_service: :changed
+# brew 'postgres', restart_service: :changed
+# brew 'redis', restart_service: :changed
+brew 'mongodb', restart_service: :changed
 
 EOF

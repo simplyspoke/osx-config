@@ -3,7 +3,7 @@
 echo '\nInstall Atom\n'
 brew update --force
 brew bundle --file=- <<EOF
-tap "caskroom/cask"
+tap 'caskroom/cask'
 cask 'atom'
 EOF
 

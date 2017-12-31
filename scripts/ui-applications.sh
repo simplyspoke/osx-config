@@ -6,7 +6,7 @@ echo '\nInstall Homebrew\n'
 echo '\nInstall Brew Applications\n'
 brew update --force
 brew bundle --file=- <<EOF
-tap "caskroom/cask"
+tap 'caskroom/cask'
 
 cask 'alfred'
 cask 'appcleaner'
@@ -34,7 +34,7 @@ cask 'textmate'
 cask 'time-out'
 cask 'tomighty'
 
-mas "Blogo", id: 902111700
-mas "Flow ai", id: 1290204939
-mas "Harvest", id: 506189836
+mas 'Blogo', id: 902111700
+mas 'Flow ai', id: 1290204939
+mas 'Harvest', id: 506189836
 EOF
