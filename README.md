@@ -9,6 +9,10 @@ Running this script is rather easy. Clone the repo locally, run `config.sh`, the
 ## What it does
 Before the script begins installing and configuring your workstation, it will ask you for your fullname and email. This information is used for later configurations such as git and Apple Store signin. After you have entered the necessary information it will confirm that you want to install configure your workstation before continuing.
 
+### bash_profile
+
+The first optional action this script offers is to overwrite the existing `~/.bash_profile` with the one present in the `files/` directory. This new `.bash_profile` provides a good collection of useful customizations and functions that are designed to enhance our terminal experience. It is a good idea to review that file to learn more about what is provided.
+
 ### Xcode
 
 As this is for a development workstation, the first thing we do is confirm that we have XCode installed. If it is, we continue, otherwise we install it.

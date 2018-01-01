@@ -11,6 +11,11 @@ if [ $install = 'n' ]; then
   exit
 fi
 
+read -p 'Do you want to overwrite your current bash_profile with the one provided in this script? (y/n)' bashProfile
+if [ $bashProfile = 'y' ]; then
+  cp -f ./files/.bash_profile ~/.bash_profile
+fi
+
 if type xcode-select >&- && xpath=$( xcode-select --print-path ) &&
   test -d "${xpath}" && test -x "${xpath}" ; then
   echo 'XCode is already installed.'
