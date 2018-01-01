@@ -22,6 +22,7 @@ dbaeumer.vscode-eslint \
 eamodio.gitlens \
 EditorConfig.EditorConfig \
 eg2.tslint \
+esbenp.prettier-vscode \
 formulahendry.auto-close-tag \
 formulahendry.auto-rename-tag \
 HookyQR.beautify \

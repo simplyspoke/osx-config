@@ -32,6 +32,7 @@ linter-ui-default \
 minimap \
 minimap-cursorline \
 minimap-highlight-selected \
+prettier-atom \
 sort-lines \
 sort-lines \
 teletype \
