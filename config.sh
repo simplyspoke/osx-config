@@ -43,12 +43,6 @@ if [ $awsCli = 'y' ]; then
   source scripts/aws.sh
 fi
 
-
-read -p 'Would you like to install the additional UI Applications? (y/n)' uiApplications
-if [ $uiApplications = 'y' ]; then
-  source scripts/ui-applications.sh
-fi
-
 echo 'Would you like to install Atom or VScode?'
 select opt in 'Atom' 'VScode' 'Both' 'Neither'; do
     case $opt in
@@ -64,6 +58,13 @@ select opt in 'Atom' 'VScode' 'Both' 'Neither'; do
           source scripts/atom.sh
           source scripts/vscode.sh
           break;;
-        Neither ) exit;;
+        Neither ) break;;
     esac
 done
+
+read -p 'Would you like to install the additional UI Applications? (y/n)' uiApplications
+if [ $uiApplications = 'y' ]; then
+  source scripts/ui-applications.sh
+fi
+
+source ~/.bash_profile
