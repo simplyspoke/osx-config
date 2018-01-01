@@ -113,3 +113,9 @@ Before the script finishing, the last optional step is to install a collection o
 * Blogo
 * Flow ai
 * Harvest
+
+## Thanks to...
+
+* Tania Rascia for her new workstation post which was a great reference - https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development
+* Nathaniel Landau for providing the foundations for the *.bash_profile* - https://gist.github.com/natelandau/10654137
+* All the contributors to http://sourabhbajaj.com/mac-setup
