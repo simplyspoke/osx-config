@@ -51,7 +51,7 @@ If we are, theres a quick error and continue to execute the script.
 
 What development workstation is complete with setting up git, so lets get to it.
 
-First, we create a couple of files in our home directory for git to pull its basic configurations from, `.gitconfig` and `.gitignore`. The `.gitconfig` sets up some basic git cli colorizations, a few aliases, and a couple of other confirmations to improve our cli experiance. Our new `.gitignore` helps us exclude irritating rideallong files like `.DS_Store`, `.Trashes`, and etc.
+First, we create a couple of files in our home directory for git to pull its basic configurations from, `.gitconfig` and `.gitignore`. The `.gitconfig` sets up some basic git cli colorizations, a few aliases, and a couple of other confirmations to improve our cli experience. Our new `.gitignore` helps us exclude irritating ride along files like `.DS_Store`, `.Trashes`, and etc.
 
 After we have these files in place, we use the the name and email we entered before to setup our default git identity. Optionally, if we want to use git with github, we can also set our github username and provide access to our keychain for credentials.
 
@@ -60,3 +60,56 @@ After we have these files in place, we use the the name and email we entered bef
 For installing node, we are going to leverage the *Node Version Manager (nvm)*, so we can easily test out the applications we are developing against different versions of node, as needed. By default, the script is going to install *Node.js v6.10.3* as it is the latest version of node that is currently supported on AWS Lambda while still supporting a large amount of ES6 features.
 
 In addition to node, we also install the *gulp-cli* and *yarn* as both of these can be rather useful in node development.
+
+### AWS CLI
+
+Installing the AWS CLI tools is optional, but if you plan on doing any work that will leverage AWS, it is a good idea. After Homebrew installs the CLI for us, the script will check to see if we have any existing AWS credential files, if none are detected, it will ask us to provide:
+
+* A default *region*
+* an *access key ID*
+* and a *AWS secret access key*
+
+It is a good idea to setup a new user with only the permissions that you will need for your development via the IAM. That way, should your credentials ever become compromised, you can easily disable the account and mitigate any damages. Here are some instructions on doing that:
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
+
+### Code Editor
+
+Since we are going to be doing a lot of code editing on this workstation, we are also going to want a solid code editor. Personally, I favor Atom, but there are also a lot of developers that prefer VScode, so the script asks if we want either one, both, or neither.
+
+Both the Atom and VScode installations install the applications themselves as well as use their respective cli package management tools to install a collection of packages/extensions that are useful for node development.
+
+### Additional Applications
+
+Before the script finishing, the last optional step is to install a collection of other applications that are either useful to our development workflow or generally interesting curiosities. Here is a list of those applications:
+
+* alfred
+* appcleaner
+* bitbar
+* cakebrew
+* citrix-receiver
+* dash
+* day-o
+* docker-toolbox
+* dropbox
+* flux
+* gimp
+* gitbook-editor
+* gitkraken
+* google-chrome
+* insomniax
+* iterm2
+* launchcontrol
+* macpass
+* robo-3t
+* scroll-reverser
+* skype-for-business
+* slack
+* spectacle
+* spotify
+* textmate
+* time-out
+* tomighty
+* Blogo
+* Flow ai
+* Harvest
