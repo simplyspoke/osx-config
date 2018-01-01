@@ -12,7 +12,8 @@ echo '\nInstall Node.js v6.10.3 as it is the latest available in AWS Lambda\n'
 nvm install v6.10.3
 
 npm -g install \
-gulp-cli
+gulp-cli \
+serverless
 
 
 echo '\nInstall Yarn\n'
