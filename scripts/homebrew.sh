@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo '\nInstall Homebrew\n'
-/usr/bin/ruby -e '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo '\nInstall Brew Bundle\n'
 brew update --force
@@ -38,7 +38,6 @@ brew 'hub'
 # Programming language prerequisites and package managers
 brew 'libyaml' # should come after openssl
 brew 'coreutils'
-brew 'yarn'
 cask 'java'
 
 # Databases

@@ -9,20 +9,21 @@ read fullName
 echo 'Please enter your email (for git, app store, and etc.): '
 read email
 
-echo '\nDo you wish to install this workstation? (y/n)\n'
-read install
-
-if [ '$install' = 'n' ]; then
+read -p 'Do you wish to install this workstation? (y/n)' install
+if [ $install = 'n' ]; then
   exit
 fi
 
-echo 'Install xcode...'
-xcode-select --install
+if type xcode-select >&- && xpath=$( xcode-select --print-path ) &&
+  test -d "${xpath}" && test -x "${xpath}" ; then
+  echo 'XCode is already installed.'
+else
+  echo 'Install xcode...'
+  xcode-select --install
+fi
 
-echo '\nWould you like to run the general finder configs? (y/n)\n'
-read finder
-
-if [ '$finder' = 'y' ]; then
+read -p 'Would you like to run the general finder configs? (y/n)' finder
+if [ $finder = 'y' ]; then
   source scripts/finder.sh
 fi
 
@@ -40,16 +41,20 @@ source scripts/git.sh
 source scripts/node-js.sh
 
 # Install AWS CLI
-echo '\nWould you like to install the AWS CLI? (y/n)\n'
-read awsCli
-
-if [ '$awsCli' = 'y' ]; then
+read -p 'Would you like to install the AWS CLI? (y/n)' awsCli
+if [ $awsCli = 'y' ]; then
   source scripts/aws.sh
 fi
 
+
+read -p 'Would you like to install the additional UI Applications? (y/n)' uiApplications
+if [ $uiApplications = 'y' ]; then
+  source scripts/ui-applications.sh
+fi
+
 echo 'Would you like to install Atom or VScode?'
-select yn in 'Yes' 'No'; do
-    case $yn in
+select opt in 'Atom' 'VScode' 'Both' 'Neither'; do
+    case $opt in
         Atom )
           source scripts/atom.sh
           echo 'export EDITOR='atom -w'' >> ~/.bash_profile
@@ -65,9 +70,3 @@ select yn in 'Yes' 'No'; do
         Neither ) exit;;
     esac
 done
-
-read -p '\nWould you like to install the additional UI Applications? (y/n)\n' uiApplications
-
-if [ '$uiApplications' = 'y' ]; then
-  source scripts/ui-applications.sh
-fi

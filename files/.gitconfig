@@ -25,7 +25,7 @@
 	meta = yellow bold
 	frag = magenta bold
 	old = red bold
-	new = green bold[color "status"]
+	new = green bold
 	added = yellow
 	changed = green
 	untracked = cyan
