@@ -1,15 +1,12 @@
 #!/bin/bash
 
-# Create a diretory variable
-dir='$(dirname '$0')'
-
 # Get variable from user
 echo 'Please enter your fullname: '
 read fullName
 echo 'Please enter your email (for git, app store, and etc.): '
 read email
 
-read -p 'Do you wish to install this workstation? (y/n)' install
+read -p 'Do you wish to configure this workstation? (y/n)' install
 if [ $install = 'n' ]; then
   exit
 fi
