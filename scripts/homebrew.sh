@@ -16,17 +16,12 @@ brew 'mas'
 
 # Unix
 brew 'bash-completion'
-brew 'gedit'
 brew 'git'
 brew 'openssl'
 brew 'python'
 brew 'ssh-copy-id'
 # brew 'watchman'
 brew 'wget'
-
-# Heroku
-brew 'heroku'
-brew 'heroku-toolbelt'
 
 # Docker
 brew 'docker'

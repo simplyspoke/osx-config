@@ -10,7 +10,6 @@ EOF
 echo '\nInstall Atom Packages\n'
 apm install \
 atom-beautify \
-atom-pair \
 atom-typescript \
 atom-wallaby \
 autoclose-html \

@@ -1,17 +1,8 @@
 
-
 [color]
 	branch = auto
 	diff = auto
 	interactive = auto
-	pager = true
-	status = auto
-	ui = true
-
-
-[color]
-	branch = auto
-	diff = auto
 	status = auto
   showbranch = auto
 	ui = true

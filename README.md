@@ -38,7 +38,6 @@ Homebrew is a very powerful package manager for OSX, so we go ahead and get it i
 * python
 * ssh-copy-id
 * wget
-* heroku & heroku-toolbelt
 * docker & docker-machine
 * hub
 * coreutils
@@ -61,7 +60,7 @@ After we have these files in place, we use the the name and email we entered bef
 
 ### Node.js
 
-For installing node, we are going to leverage the *Node Version Manager (nvm)*, so we can easily test out the applications we are developing against different versions of node, as needed. By default, the script is going to install *Node.js v6.10.3* as it is the latest version of node that is currently supported on AWS Lambda while still supporting a large amount of ES6 features.
+For installing node, we are going to leverage the *Node Version Manager (nvm)*, so we can easily test out the applications we are developing against different versions of node, as needed. By default, the script is going to install *Node.js v8.10 as it is the latest version of node that is currently supported on AWS Lambda while still supporting a large amount of ES6 features.
 
 In addition to node, we also install the *gulp-cli* and *yarn* as both of these can be rather useful in node development.
 

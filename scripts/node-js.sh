@@ -8,8 +8,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-echo '\nInstall Node.js v6.10.3 as it is the latest available in AWS Lambda\n'
-nvm install v6.10.3
+echo '\nInstall Node.js v8.10 as it is the latest available in AWS Lambda\n'
+nvm install v8.10
 
 npm -g install \
 gulp-cli \
@@ -17,5 +17,8 @@ serverless
 
 
 echo '\nInstall Yarn\n'
-brew update --force
-brew install yarn
+npm install -g yarn
+
+echo '\nInstall Commitizen\n'
+npm install -g commitizen cz-conventional-changelog
+echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
