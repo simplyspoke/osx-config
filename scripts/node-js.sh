@@ -11,13 +11,7 @@ export NVM_DIR="$HOME/.nvm"
 echo '\nInstall Node.js v8.10 as it is the latest available in AWS Lambda\n'
 nvm install v8.10
 
-npm -g install \
-gulp-cli \
-serverless
-
-
-echo '\nInstall Yarn\n'
-npm install -g yarn
+npm -g install serverless
 
 echo '\nInstall Commitizen\n'
 npm install -g commitizen cz-conventional-changelog
